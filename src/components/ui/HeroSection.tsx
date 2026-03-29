@@ -96,9 +96,9 @@ export function HeroSection() {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-6xl md:text-7xl lg:text-8xl font-bold text-white/95 mb-6 tracking-tight"
           >
-            {profile.name.split(' ')[0]}{' '}
+            Arqum{' '}
             <span className="gradient-amber">
-              {profile.name.split(' ')[1]}
+              Malik
             </span>
           </motion.h1>
 
