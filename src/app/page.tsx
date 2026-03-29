@@ -4,7 +4,6 @@ import {
   ExperienceTimeline,
   SkillsSection,
   EducationSection,
-  CertificationsSection,
   LanguagesSection,
 } from '@/components/resume';
 import { ContactSection } from '@/components/contact';
@@ -29,9 +28,6 @@ export default function HomePage() {
 
       {/* Education Section */}
       <EducationSection />
-
-      {/* Certifications Section */}
-      <CertificationsSection />
 
       {/* Languages Section */}
       <LanguagesSection />

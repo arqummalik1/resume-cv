@@ -9,7 +9,7 @@ const iconMap: Record<string, React.ElementType> = {
   'Reduced app crashes by 35%': Rocket,
   'Boosted app performance by 20%': TrendingUp,
   'Published 4 apps on Apple App Store': Award,
-  '2.5+ Years of React Native Experience': Star,
+  '4+ Years of React Native Experience': Star,
 };
 
 export function Summary() {

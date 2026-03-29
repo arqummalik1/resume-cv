@@ -136,7 +136,7 @@ export function HeroSection() {
             transition={{ delay: 0.6 }}
             className="text-base text-white/30 max-w-xl mx-auto mb-12"
           >
-            2.5+ years experience building high-performance mobile apps used by thousands on App Store and Play Store.
+            4+ years experience building high-performance mobile apps used by thousands on App Store and Play Store.
           </motion.p>
 
           {/* Stats - Glass cards */}
@@ -147,7 +147,7 @@ export function HeroSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto mb-14"
           >
             {[
-              { value: '2.5+', label: 'Years Experience' },
+              { value: '4+', label: 'Years Experience' },
               { value: '6+', label: 'Apps Published' },
               { value: '35%', label: 'Crash Reduction' },
               { value: '20%', label: 'Performance Boost' },

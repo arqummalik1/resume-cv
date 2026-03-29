@@ -122,7 +122,7 @@ export const profile: Profile = {
     'Reduced app crashes by 35% through API optimization',
     'Boosted app performance by 20% at Ladybird Web Solution',
     'Published 4 apps on Apple App Store',
-    '2.5+ Years of React Native Experience',
+    '4+ Years of React Native Experience',
   ],
 };
 
