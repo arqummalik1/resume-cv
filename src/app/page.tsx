@@ -10,7 +10,7 @@ import {
 } from '@/components/resume';
 import { ContactSection } from '@/components/contact';
 import { ProjectGrid } from '@/components/portfolio';
-import { Section } from '@/components/ui';
+import { Section, OpenToWorkSection } from '@/components/ui';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -48,13 +48,16 @@ export default function HomePage() {
         <div className="text-center mt-8">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 font-medium transition-colors"
           >
             View All Projects
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </Section>
+
+      {/* Open to Work */}
+      <OpenToWorkSection />
 
       {/* Contact Section */}
       <ContactSection />
