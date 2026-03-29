@@ -4,7 +4,11 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Download, Sparkles, MapPin, Code2, Smartphone } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { profile } from '@/data/profile';
+
+// Dynamically import LiquidGlass to avoid SSR issues
+const LiquidGlass = dynamic(() => import('liquid-glass-react'), { ssr: false });
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -81,12 +85,23 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 mb-10 rounded-full bg-white/5 border border-white/10"
           >
-            <Sparkles className="w-4 h-4 text-amber-500" />
-            <span className="text-sm font-medium text-white/80">
-              Available for Projects
-            </span>
+            <LiquidGlass
+              displacementScale={30}
+              blurAmount={0.2}
+              saturation={130}
+              aberrationIntensity={1}
+              elasticity={0.25}
+              cornerRadius={999}
+              padding="10px 20px"
+            >
+              <div className="inline-flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-500" />
+                <span className="text-sm font-medium text-white/80">
+                  Available for Projects
+                </span>
+              </div>
+            </LiquidGlass>
           </motion.div>
 
           {/* Name */}
@@ -157,18 +172,25 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  borderColor: 'rgba(255,255,255,0.18)',
-                }}
-                className="liquid-card p-5 text-center cursor-default"
               >
-                <div className="text-3xl font-bold gradient-amber mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs text-white/40 font-medium">
-                  {stat.label}
-                </div>
+                <LiquidGlass
+                  displacementScale={40}
+                  blurAmount={0.15}
+                  saturation={140}
+                  aberrationIntensity={1.5}
+                  elasticity={0.2}
+                  cornerRadius={16}
+                  padding="16px"
+                >
+                  <div className="text-center cursor-default">
+                    <div className="text-3xl font-bold gradient-amber mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-white/40 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                </LiquidGlass>
               </motion.div>
             ))}
           </motion.div>
