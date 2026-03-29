@@ -1,17 +1,21 @@
 # Live Resume
 
-A modern, interactive portfolio and resume built with Next.js.
+An elegant, interactive portfolio and resume crafted with precision.
+
+## Aesthetic
+
+A refined monochromatic palette with amber accents — no saturated pinks or purples. Clean slate tones, warm gold highlights, and purposeful whitespace.
 
 ## Features
 
-- Interactive resume with experience timeline
-- Portfolio grid with project filtering
-- PDF export capability
-- Print-optimized layout
-- Contact form with validation
-- Responsive design
+- Interactive experience timeline
+- Filterable portfolio grid
+- PDF export with multiple formats
+- Print-optimized layouts
+- Validated contact form
+- Fluid animations
 
-## Getting Started
+## Quick Start
 
 ```bash
 bun install
@@ -20,33 +24,34 @@ bun dev
 
 ## Tech Stack
 
-- Next.js 16
-- React 19
-- Tailwind CSS 4
-- Framer Motion
-- Recharts
-- Zod + React Hook Form
+| Layer | Technology |
+|-------|------------|
+| Framework | Next.js 16 |
+| UI | React 19, Tailwind CSS 4 |
+| Motion | Framer Motion |
+| Charts | Recharts |
+| Forms | Zod + React Hook Form |
 
-## Project Structure
+## Structure
 
 ```
 src/
-├── app/              # Next.js app router pages
-├── components/      # React components
-│   ├── resume/       # Resume-related components
-│   ├── portfolio/    # Portfolio components
-│   ├── contact/     # Contact form components
-│   ├── layout/      # Layout components
-│   └── ui/          # Reusable UI components
-├── config/           # Site configuration
-└── data/             # Content data files
+├── app/              # Pages & API routes
+├── components/
+│   ├── resume/       # Resume sections
+│   ├── portfolio/    # Project gallery
+│   ├── contact/     # Contact components
+│   ├── layout/      # Shell components
+│   └── ui/          # Primitives
+├── config/           # Site settings
+└── data/             # Content files
 ```
 
 ## Commands
 
-| Command      | Description         |
-|-------------|---------------------|
-| `bun dev`   | Start dev server    |
+| Command | Purpose |
+|---------|---------|
+| `bun dev` | Development server |
 | `bun build` | Production build |
-| `bun lint`  | Run ESLint        |
-| `bun typecheck` | Type check    |
+| `bun lint` | Code quality |
+| `bun typecheck` | Type validation |
