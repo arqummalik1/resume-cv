@@ -29,7 +29,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative h-64 md:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl overflow-hidden mb-8"
+            className="relative h-64 md:h-96 bg-gradient-to-br from-stone-600 to-stone-800 rounded-xl overflow-hidden mb-8"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-white/30 text-6xl font-bold">

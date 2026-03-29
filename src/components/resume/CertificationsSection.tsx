@@ -27,8 +27,8 @@ export function CertificationsSection() {
             <Card hover className="h-full">
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                  <div className="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0">
+                    <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 dark:text-white text-sm leading-tight">
@@ -54,7 +54,7 @@ export function CertificationsSection() {
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      className="inline-flex items-center gap-1 text-sm text-amber-600 dark:text-amber-400 hover:underline"
                     >
                       View Credential
                       <ExternalLink className="w-3.5 h-3.5" />

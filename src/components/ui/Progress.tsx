@@ -7,7 +7,7 @@ interface ProgressProps {
   value: number;
   max?: number;
   size?: 'sm' | 'md' | 'lg';
-  color?: 'blue' | 'green' | 'purple' | 'orange';
+  color?: 'blue' | 'green' | 'amber' | 'orange';
   showLabel?: boolean;
   animated?: boolean;
   className?: string;
@@ -33,7 +33,7 @@ export function Progress({
   const colors = {
     blue: 'bg-blue-600',
     green: 'bg-green-600',
-    purple: 'bg-purple-600',
+    amber: 'bg-amber-600',
     orange: 'bg-orange-600',
   };
 
