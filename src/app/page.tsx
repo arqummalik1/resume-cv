@@ -1,6 +1,5 @@
-import { Container } from '@/components/ui';
+import { Container, HeroSection, Section, OpenToWorkSection } from '@/components/ui';
 import {
-  ProfileHeader,
   Summary,
   ExperienceTimeline,
   SkillsSection,
@@ -10,16 +9,17 @@ import {
 } from '@/components/resume';
 import { ContactSection } from '@/components/contact';
 import { ProjectGrid } from '@/components/portfolio';
-import { Section, OpenToWorkSection } from '@/components/ui';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <Container size="lg" className="py-12">
-      {/* About Section */}
-      <section id="about" className="mb-16">
-        <ProfileHeader />
+    <Container size="lg" className="py-0">
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Summary Section */}
+      <section id="about" className="py-16">
         <Summary />
       </section>
 

@@ -1,6 +1,9 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { profile } from '@/data/profile';
-import { Section, Card, CardContent } from '@/components/ui';
+import { Section } from '@/components/ui';
 import { ContactForm } from './ContactForm';
 import { SocialLinks } from './SocialLinks';
 
@@ -14,59 +17,73 @@ export function ContactSection() {
 
   return (
     <Section id="contact" title="Get In Touch" subtitle="Let's discuss your next project">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Contact Info */}
-        <div className="lg:col-span-1">
-          <Card>
-            <CardContent className="p-6 space-y-6">
-              <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
-                Contact Information
-              </h3>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="glass rounded-3xl p-6 md:p-8 h-full">
+            <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">
+              Contact Information
+            </h3>
 
-              <div className="space-y-4">
-                {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                  <div key={label} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{label}</p>
-                      {href ? (
-                        <a
-                          href={href}
-                          className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        >
-                          {value}
-                        </a>
-                      ) : (
-                        <p className="font-medium text-gray-900 dark:text-white">{value}</p>
-                      )}
-                    </div>
+            <div className="space-y-5">
+              {contactInfo.map(({ icon: Icon, label, value, href }, index) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-4"
+                >
+                  <div className="w-12 h-12 rounded-xl glass flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-amber-500" />
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{label}</p>
+                    {href ? (
+                      <a
+                        href={href}
+                        className="font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                      >
+                        {value}
+                      </a>
+                    ) : (
+                      <p className="font-semibold text-gray-900 dark:text-white">{value}</p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 
-              <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                  Connect with me
-                </p>
-                <SocialLinks size="md" />
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+            <div className="mt-8 pt-6 border-t border-gray-200/50 dark:border-gray-700/50">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                Connect with me
+              </p>
+              <SocialLinks size="md" />
+            </div>
+          </div>
+        </motion.div>
 
         {/* Contact Form */}
-        <div className="lg:col-span-2">
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-6">
-                Send a Message
-              </h3>
-              <ContactForm />
-            </CardContent>
-          </Card>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="lg:col-span-2"
+        >
+          <div className="glass rounded-3xl p-6 md:p-8">
+            <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">
+              Send a Message
+            </h3>
+            <ContactForm />
+          </div>
+        </motion.div>
       </div>
     </Section>
   );

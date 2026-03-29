@@ -5,7 +5,6 @@ import { skillCategories, getSkillsByCategory } from '@/data/skills';
 import { Section } from '@/components/ui';
 import type { Skill } from '@/data/skills';
 
-// Determine skill level color based on proficiency
 function getSkillColors(level: number): { dot: string; bg: string; border: string } {
   if (level >= 90) return { 
     dot: 'bg-emerald-500', 
@@ -29,7 +28,6 @@ function getSkillColors(level: number): { dot: string; bg: string; border: strin
   };
 }
 
-// Category icons as simple SVGs
 const categoryIcons: Record<string, React.ReactNode> = {
   Languages: (
     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,8 +66,9 @@ function SkillChip({ skill }: { skill: Skill }) {
   
   return (
     <motion.div 
-      whileHover={{ scale: 1.02 }}
-      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border ${colors.bg} ${colors.border} transition-shadow hover:shadow-sm`}
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl border ${colors.bg} ${colors.border} transition-all cursor-default`}
     >
       <span className={`w-2 h-2 rounded-full ${colors.dot}`} />
       <span className="font-medium text-gray-800 dark:text-gray-200 text-sm">
@@ -88,22 +87,21 @@ function SkillCategory({ category, index }: { category: string; index: number })
   const categorySkills = getSkillsByCategory(category);
   if (categorySkills.length === 0) return null;
 
-  // Sort skills by level (highest first)
   const sortedSkills = [...categorySkills].sort((a, b) => b.level - a.level);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="space-y-3"
+      className="glass rounded-2xl p-6"
     >
-      <div className="flex items-center gap-2">
-        <span className="text-gray-500 dark:text-gray-400">
+      <div className="flex items-center gap-2 mb-4">
+        <span className="text-amber-500">
           {categoryIcons[category]}
         </span>
-        <h3 className="font-semibold text-gray-900 dark:text-white text-sm uppercase tracking-wide">
+        <h3 className="font-semibold text-gray-900 dark:text-white text-sm uppercase tracking-wider">
           {category}
         </h3>
       </div>
@@ -119,27 +117,7 @@ function SkillCategory({ category, index }: { category: string; index: number })
 export function SkillsSection() {
   return (
     <Section id="skills" title="Skills & Expertise" subtitle="Technologies and tools I work with">
-      {/* Legend */}
-      <div className="mb-6 pb-6 border-b border-gray-200 dark:border-gray-800">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <span className="text-gray-500 dark:text-gray-400 font-medium">Proficiency:</span>
-          <span className="inline-flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Expert (90%+)</span>
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Advanced (75%+)</span>
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Intermediate (60%+)</span>
-          </span>
-        </div>
-      </div>
-
-      {/* Skills Grid - 3 columns on large screens, 2 on medium, 1 on small */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skillCategories.map((category, index) => (
           <SkillCategory key={category} category={category} index={index} />
         ))}

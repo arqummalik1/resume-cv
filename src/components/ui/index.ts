@@ -8,3 +8,4 @@ export { Section } from './Section';
 export { Container } from './Container';
 export { PrintButton } from './PrintButton';
 export { OpenToWorkSection } from './OpenToWorkSection';
+export { HeroSection } from './HeroSection';
