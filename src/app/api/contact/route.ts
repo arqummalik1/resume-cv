@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error('Missing RESEND_API_KEY');
+  }
+  return new Resend(apiKey);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,6 +20,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    const resend = getResend();
 
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
@@ -30,7 +38,7 @@ export async function POST(request: NextRequest) {
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #666;">Email:</td>
-              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #2563eb;">${email}</a></td>
+              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #2563eb;">${email}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #666;">Subject:</td>
