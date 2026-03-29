@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui';
+import { GlassCard } from '@/components/ui/GlassCard';
 import type { Experience } from '@/data/experience';
 
 interface ExperienceCardProps {
@@ -17,33 +17,30 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
   };
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      className="glass rounded-2xl p-6 md:p-8"
-    >
+    <GlassCard className="p-6 md:p-8">
       <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
-        {/* Company Logo Placeholder */}
-        <div className="w-14 h-14 rounded-2xl glass flex items-center justify-center flex-shrink-0">
-          <span className="text-lg font-bold text-amber-600 dark:text-amber-500">
+        {/* Company Logo */}
+        <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center flex-shrink-0">
+          <span className="text-lg font-bold text-amber-500">
             {experience.company.substring(0, 2).toUpperCase()}
           </span>
         </div>
 
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-2 mb-1">
-            <h3 className="font-bold text-xl text-gray-900 dark:text-white">
+            <h3 className="font-bold text-xl text-white/95">
               {experience.title}
             </h3>
             {experience.current && (
-              <span className="px-3 py-1 text-xs font-medium bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/20">
                 Current
               </span>
             )}
           </div>
-          <p className="text-amber-600 dark:text-amber-500 font-medium text-lg">
+          <p className="text-amber-500 font-medium text-lg">
             {experience.company}
           </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <p className="text-sm text-white/40 mt-1">
             {formatDate(experience.startDate)} –{' '}
             {experience.current ? 'Present' : formatDate(experience.endDate!)}
             {' · '}{experience.location}
@@ -52,7 +49,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       </div>
 
-      <p className="text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
+      <p className="text-white/50 mb-5 leading-relaxed">
         {experience.description}
       </p>
 
@@ -65,7 +62,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.05 }}
             viewport={{ once: true }}
-            className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300"
+            className="flex items-start gap-2 text-sm text-white/60"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 flex-shrink-0" />
             {achievement}
@@ -76,11 +73,14 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       {/* Technologies */}
       <div className="flex flex-wrap gap-2">
         {experience.technologies.map((tech) => (
-          <Badge key={tech} variant="secondary" size="sm">
+          <span
+            key={tech}
+            className="px-3 py-1.5 text-xs font-medium bg-white/5 border border-white/8 text-white/60 rounded-lg"
+          >
             {tech}
-          </Badge>
+          </span>
         ))}
       </div>
-    </motion.div>
+    </GlassCard>
   );
 }

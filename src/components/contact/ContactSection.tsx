@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { GlassCard } from '@/components/ui/GlassCard';
 import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { profile } from '@/data/profile';
 import { Section } from '@/components/ui';
@@ -25,8 +26,8 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="glass rounded-3xl p-6 md:p-8 h-full">
-            <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">
+          <GlassCard className="p-6 md:p-8 h-full">
+            <h3 className="font-bold text-xl text-white/90 mb-6">
               Contact Information
             </h3>
 
@@ -40,33 +41,33 @@ export function ContactSection() {
                   viewport={{ once: true }}
                   className="flex items-center gap-4"
                 >
-                  <div className="w-12 h-12 rounded-xl glass flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center flex-shrink-0">
                     <Icon className="w-5 h-5 text-amber-500" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{label}</p>
+                    <p className="text-sm text-white/40">{label}</p>
                     {href ? (
                       <a
                         href={href}
-                        className="font-semibold text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                        className="font-semibold text-white/90 hover:text-amber-500 transition-colors"
                       >
                         {value}
                       </a>
                     ) : (
-                      <p className="font-semibold text-gray-900 dark:text-white">{value}</p>
+                      <p className="font-semibold text-white/90">{value}</p>
                     )}
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-gray-200/50 dark:border-gray-700/50">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            <div className="mt-8 pt-6 border-t border-white/8">
+              <p className="text-sm text-white/40 mb-4">
                 Connect with me
               </p>
               <SocialLinks size="md" />
             </div>
-          </div>
+          </GlassCard>
         </motion.div>
 
         {/* Contact Form */}
@@ -77,12 +78,12 @@ export function ContactSection() {
           viewport={{ once: true }}
           className="lg:col-span-2"
         >
-          <div className="glass rounded-3xl p-6 md:p-8">
-            <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-6">
+          <GlassCard className="p-6 md:p-8">
+            <h3 className="font-bold text-xl text-white/90 mb-6">
               Send a Message
             </h3>
             <ContactForm />
-          </div>
+          </GlassCard>
         </motion.div>
       </div>
     </Section>

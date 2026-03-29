@@ -9,10 +9,9 @@ export function ExperienceTimeline() {
   return (
     <Section id="experience" title="Work Experience" subtitle="My professional journey">
       <div className="relative max-w-4xl mx-auto">
-        {/* Timeline line with glow */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 hidden md:block">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/30 to-transparent" />
-          <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700" />
+        {/* Timeline line */}
+        <div className="absolute left-6 top-0 bottom-0 w-[1px] hidden md:block">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
         </div>
 
         <div className="space-y-8">
@@ -26,16 +25,16 @@ export function ExperienceTimeline() {
               className="relative md:pl-16"
             >
               {/* Glass Timeline Node */}
-              <div className="absolute left-3 top-6 w-7 h-7 hidden md:block">
-                <div className="absolute inset-0 glass rounded-full" />
-                <div className="absolute inset-2 bg-amber-500 rounded-full" />
-                {exp.current && (
-                  <motion.div
-                    animate={{ scale: [1, 1.5, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute inset-0 bg-amber-500 rounded-full opacity-50"
-                  />
-                )}
+              <div className="absolute left-[18px] top-6 hidden md:block">
+                <div className="w-3 h-3 rounded-full bg-white/10 border border-white/20 relative">
+                  {exp.current && (
+                    <motion.div
+                      animate={{ scale: [1, 1.8, 1], opacity: [0.5, 0, 0.5] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="absolute inset-0 rounded-full bg-amber-500/50"
+                    />
+                  )}
+                </div>
               </div>
 
               <ExperienceCard experience={exp} />
