@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name, email, subject, message } = body;
 
-    // Validate required fields
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
@@ -13,16 +15,36 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Here you would typically:
-    // 1. Send an email using a service like SendGrid, Resend, or Nodemailer
-    // 2. Store the message in a database
-    // 3. Send a notification to Slack/Discord
-    
-    // For now, we'll just log and return success
-    console.log('Contact form submission:', { name, email, subject, message });
-
-    // Simulate processing delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: 'arqummalik1@gmail.com',
+      subject: `[Portfolio] ${subject}`,
+      html: `
+        <div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #1a1a1a;">New Contact Form Submission</h2>
+          
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr>
+              <td style="padding: 8px 0; color: #666; width: 80px;">Name:</td>
+              <td style="padding: 8px 0; color: #1a1a1a; font-weight: 500;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; color: #666;">Email:</td>
+              <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #2563eb;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; color: #666;">Subject:</td>
+              <td style="padding: 8px 0; color: #1a1a1a;">${subject}</td>
+            </tr>
+          </table>
+          
+          <div style="margin-top: 24px; padding: 16px; background: #f9f9f9; border-radius: 8px;">
+            <p style="margin: 0; color: #1a1a1a; line-height: 1.6;">${message.replace(/\n/g, '<br>')}</p>
+          </div>
+        </div>
+      `,
+      replyTo: email,
+    });
 
     return NextResponse.json(
       { success: true, message: 'Message sent successfully' },
