@@ -96,36 +96,33 @@ export const profile: Profile = {
   // -------------------------------------------------------------------------
   // BASIC INFO (Required)
   // -------------------------------------------------------------------------
-  name: 'Alex Johnson',
-  title: 'Senior Software Engineer',
+  name: 'Mohd Arqum Malik',
+  title: 'React Native Developer',
   photo: '/images/profile.jpg', // Set to '' to hide photo
-  email: 'alex.johnson@example.com',
-  location: 'San Francisco, CA',
+  email: 'arqummalik1@gmail.com',
+  location: 'Udhampur, Jammu & Kashmir, India',
 
   // -------------------------------------------------------------------------
   // CONTACT & SOCIAL (Optional - remove or set to undefined if not needed)
   // -------------------------------------------------------------------------
-  phone: '+1 (555) 123-4567',
-  website: 'https://alexjohnson.dev',
-  linkedin: 'https://linkedin.com/in/alexjohnson',
-  github: 'https://github.com/alexjohnson',
-  twitter: 'https://twitter.com/alexjohnson',
+  phone: '+91 7006082958',
+  linkedin: 'https://www.linkedin.com/in/arqum-malik-88171b1a7/',
 
   // -------------------------------------------------------------------------
   // PROFESSIONAL SUMMARY
   // Keep this concise: 2-4 sentences that capture who you are professionally
   // -------------------------------------------------------------------------
-  summary: `Results-driven software engineer with 8+ years of experience building scalable web applications. Passionate about clean code, performance optimization, and mentoring junior developers. Expert in React, TypeScript, and cloud architecture.`,
+  summary: `Experienced React Native Developer with a strong foundation in building and optimizing cross-platform applications for Android and iOS. Proficient in Redux, Firebase, REST APIs, and responsive UI/UX design. Skilled in delivering scalable, high-performance solutions in Agile environments.`,
 
   // -------------------------------------------------------------------------
   // KEY HIGHLIGHTS
   // 3-5 achievement statements with metrics when possible
   // -------------------------------------------------------------------------
   highlights: [
-    'Led development of platform serving 1M+ users',
-    'Reduced page load time by 60%',
-    'Managed team of 5 engineers',
-    'Speaker at 3 tech conferences',
+    'Reduced app crashes by 35% through API optimization',
+    'Boosted app performance by 20% at Ladybird Web Solution',
+    'Published 4 apps on Apple App Store',
+    '2.5+ Years of React Native Experience',
   ],
 };
 

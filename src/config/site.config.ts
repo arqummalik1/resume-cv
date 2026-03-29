@@ -135,9 +135,9 @@ export const siteConfig: SiteConfig = {
   // ---------------------------------------------------------------------------
   meta: {
     titleTemplate: '{{name}} | {{title}}',
-    defaultDescription: 'Professional resume and portfolio website',
-    keywords: ['resume', 'portfolio', 'developer', 'software engineer', 'web developer'],
-    siteUrl: 'https://your-domain.com',
+    defaultDescription: 'React Native Developer specializing in cross-platform mobile applications for Android and iOS. 2.5+ years of experience in Redux, Firebase, and mobile app development.',
+    keywords: ['react native developer', 'mobile app developer', 'android', 'ios', 'redux', 'firebase', 'cross-platform', 'arqum malik'],
+    siteUrl: 'https://arqum.dev',
     locale: 'en',
   },
 

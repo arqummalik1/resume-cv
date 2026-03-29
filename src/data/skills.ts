@@ -82,17 +82,9 @@ export interface Language {
  * Add, remove, or rename categories as needed.
  */
 export const skillCategories: string[] = [
-  'Languages',    // Programming languages
-  'Frontend',     // Frontend frameworks & libraries
-  'Backend',      // Backend frameworks & technologies
-  'Databases',    // Database technologies
-  'Cloud',        // Cloud platforms & services
-  'DevOps',       // DevOps tools & practices
-  // Add more categories here:
-  // 'Mobile',
-  // 'Design',
-  // 'Soft Skills',
-  // 'Other',
+  'Frontend Development',
+  'Tools & Technologies',
+  'Development Practices',
 ];
 
 /**
@@ -105,148 +97,118 @@ export const skillCategories: string[] = [
  */
 export const skills: Skill[] = [
   // ---------------------------------------------------------------------------
-  // PROGRAMMING LANGUAGES
+  // FRONTEND DEVELOPMENT
   // ---------------------------------------------------------------------------
   {
-    name: 'TypeScript',
-    level: 95,
-    category: 'Languages',
-    yearsOfExperience: 5,
+    name: 'React Native',
+    level: 90,
+    category: 'Frontend Development',
+    yearsOfExperience: 2.5,
   },
   {
     name: 'JavaScript',
-    level: 95,
-    category: 'Languages',
-    yearsOfExperience: 8,
-  },
-  {
-    name: 'Python',
-    level: 80,
-    category: 'Languages',
-    yearsOfExperience: 4,
-  },
-  {
-    name: 'Go',
-    level: 65,
-    category: 'Languages',
-    yearsOfExperience: 2,
-  },
-
-  // ---------------------------------------------------------------------------
-  // FRONTEND
-  // ---------------------------------------------------------------------------
-  {
-    name: 'React',
-    level: 95,
-    category: 'Frontend',
-    yearsOfExperience: 6,
-  },
-  {
-    name: 'Next.js',
-    level: 90,
-    category: 'Frontend',
-    yearsOfExperience: 4,
-  },
-  {
-    name: 'Tailwind CSS',
-    level: 90,
-    category: 'Frontend',
-    yearsOfExperience: 3,
-  },
-  {
-    name: 'Vue.js',
-    level: 70,
-    category: 'Frontend',
-    yearsOfExperience: 2,
-  },
-
-  // ---------------------------------------------------------------------------
-  // BACKEND
-  // ---------------------------------------------------------------------------
-  {
-    name: 'Node.js',
-    level: 90,
-    category: 'Backend',
-    yearsOfExperience: 6,
-  },
-  {
-    name: 'Express',
     level: 88,
-    category: 'Backend',
-    yearsOfExperience: 5,
-  },
-  {
-    name: 'Django',
-    level: 75,
-    category: 'Backend',
+    category: 'Frontend Development',
     yearsOfExperience: 3,
   },
   {
-    name: 'GraphQL',
+    name: 'TypeScript',
     level: 80,
-    category: 'Backend',
-    yearsOfExperience: 3,
-  },
-
-  // ---------------------------------------------------------------------------
-  // DATABASES
-  // ---------------------------------------------------------------------------
-  {
-    name: 'PostgreSQL',
-    level: 85,
-    category: 'Databases',
-    yearsOfExperience: 5,
-  },
-  {
-    name: 'MongoDB',
-    level: 80,
-    category: 'Databases',
-    yearsOfExperience: 4,
-  },
-  {
-    name: 'Redis',
-    level: 75,
-    category: 'Databases',
-    yearsOfExperience: 3,
-  },
-
-  // ---------------------------------------------------------------------------
-  // CLOUD & DEVOPS
-  // ---------------------------------------------------------------------------
-  {
-    name: 'AWS',
-    level: 85,
-    category: 'Cloud',
-    yearsOfExperience: 4,
-  },
-  {
-    name: 'Docker',
-    level: 85,
-    category: 'DevOps',
-    yearsOfExperience: 4,
-  },
-  {
-    name: 'Kubernetes',
-    level: 70,
-    category: 'DevOps',
+    category: 'Frontend Development',
     yearsOfExperience: 2,
   },
   {
-    name: 'CI/CD',
-    level: 85,
-    category: 'DevOps',
-    yearsOfExperience: 4,
+    name: 'React.js',
+    level: 78,
+    category: 'Frontend Development',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'HTML',
+    level: 75,
+    category: 'Frontend Development',
+    yearsOfExperience: 3,
+  },
+  {
+    name: 'CSS',
+    level: 75,
+    category: 'Frontend Development',
+    yearsOfExperience: 3,
+  },
+  {
+    name: 'Bootstrap',
+    level: 70,
+    category: 'Frontend Development',
+    yearsOfExperience: 2,
   },
 
   // ---------------------------------------------------------------------------
-  // ADD MORE SKILLS HERE
+  // TOOLS & TECHNOLOGIES
   // ---------------------------------------------------------------------------
-  // {
-  //   name: 'Your Skill',
-  //   level: 85,
-  //   category: 'Category Name',
-  //   yearsOfExperience: 3,
-  // },
+  {
+    name: 'Redux',
+    level: 85,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'Firebase',
+    level: 82,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'REST APIs',
+    level: 88,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2.5,
+  },
+  {
+    name: 'Axios',
+    level: 80,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'GitHub',
+    level: 85,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 3,
+  },
+  {
+    name: 'Xcode',
+    level: 75,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2,
+  },
+  {
+    name: 'Android Studio',
+    level: 78,
+    category: 'Tools & Technologies',
+    yearsOfExperience: 2,
+  },
+
+  // ---------------------------------------------------------------------------
+  // DEVELOPMENT PRACTICES
+  // ---------------------------------------------------------------------------
+  {
+    name: 'Responsive Design',
+    level: 85,
+    category: 'Development Practices',
+    yearsOfExperience: 3,
+  },
+  {
+    name: 'UI/UX Optimization',
+    level: 82,
+    category: 'Development Practices',
+    yearsOfExperience: 2.5,
+  },
+  {
+    name: 'Agile Methodologies',
+    level: 80,
+    category: 'Development Practices',
+    yearsOfExperience: 2,
+  },
 ];
 
 /**
@@ -257,11 +219,9 @@ export const skills: Skill[] = [
  * List the languages you speak and your proficiency level.
  */
 export const languages: Language[] = [
-  { name: 'English', level: 'Native' },
-  { name: 'Spanish', level: 'Professional' },
-  { name: 'French', level: 'Basic' },
-  // Add more languages here:
-  // { name: 'German', level: 'Intermediate' },
+  { name: 'English', level: 'Professional' },
+  { name: 'Hindi', level: 'Native' },
+  { name: 'Urdu', level: 'Native' },
 ];
 
 // =============================================================================

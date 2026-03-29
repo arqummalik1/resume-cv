@@ -121,30 +121,31 @@ export const experience: Experience[] = [
   // ---------------------------------------------------------------------------
   {
     id: 'exp-1',
-    title: 'Senior Software Engineer',
-    company: 'TechCorp Inc.',
-    // companyLogo: '/logos/techcorp.png',  // Uncomment and add logo if you have one
-    location: 'San Francisco, CA',
+    title: 'React Native Developer',
+    company: 'WP Event Manager Pvt Ltd.',
+    location: 'Surat, Gujarat (Remote)',
     type: 'full-time',
-    startDate: '2022-01',
-    // endDate: undefined,  // Omit or undefined for current position
-    current: true,
+    startDate: '2022-12',
+    endDate: '2024-04',
+    current: false,
     description:
-      'Lead development of customer-facing web applications and mentor junior developers.',
+      'Designed, developed, and published Hire Tech Talent app (Android & iOS) using React Native. Solved complex cross-platform challenges and ensured timely deployment.',
     achievements: [
-      'Architected microservices platform handling 10M+ requests/day',
-      'Reduced deployment time by 80% through CI/CD improvements',
-      'Mentored 3 junior developers to mid-level positions',
-      'Led migration from monolith to microservices architecture',
+      'Designed, developed, and published Hire Tech Talent app (Android & iOS) using React Native',
+      'Solved complex cross-platform challenges and ensured timely deployment',
+      'Implemented Redux state management, QR Code Scanner, and Firebase push notifications',
+      'Added features like Swipe to Check-in, Bookmarking, and Notes',
+      'Enhanced and maintained the WP Event Manager app with continuous improvements',
+      'Integrated Donut Charts for ticket sales insights',
+      'Built a secure app-locking system for license validation',
+      'Reduced app crashes by 35% by fixing API-related issues',
     ],
     technologies: [
-      'React',
-      'TypeScript',
-      'Node.js',
-      'PostgreSQL',
-      'AWS',
-      'Docker',
-      'Kubernetes',
+      'React Native',
+      'Redux',
+      'Firebase',
+      'QR Code Scanner',
+      'REST APIs',
     ],
   },
 
@@ -153,65 +154,24 @@ export const experience: Experience[] = [
   // ---------------------------------------------------------------------------
   {
     id: 'exp-2',
-    title: 'Software Engineer',
-    company: 'StartupXYZ',
-    location: 'San Francisco, CA',
+    title: 'Associate Software Engineer',
+    company: 'Ladybird Web Solution Pvt Ltd.',
+    location: 'Jammu, J&K',
     type: 'full-time',
-    startDate: '2019-03',
-    endDate: '2021-12',
+    startDate: '2021-10',
+    endDate: '2022-10',
     current: false,
-    description: 'Full-stack development for a fast-growing SaaS platform.',
+    description: 'Developed and maintained the Faveo Helpdesk app. Built responsive UI and integrated APIs for smooth performance.',
     achievements: [
-      'Built real-time collaboration features used by 50K+ users',
-      'Implemented automated testing reducing bugs by 40%',
-      'Optimized database queries improving response time by 60%',
+      'Developed and maintained the Faveo Helpdesk app',
+      'Built responsive UI and integrated APIs for smooth performance',
+      'Implemented multi-language support and white-labeling features',
+      'Redesigned the Faveo Support app to improve scalability',
+      'Boosted app performance by 20%',
+      'Fixed critical bugs and maintained app store updates',
     ],
-    technologies: ['React', 'Python', 'Django', 'PostgreSQL', 'Redis', 'AWS'],
+    technologies: ['React Native', 'REST APIs', 'Multi-language Support'],
   },
-
-  // ---------------------------------------------------------------------------
-  // EARLIER POSITION
-  // ---------------------------------------------------------------------------
-  {
-    id: 'exp-3',
-    title: 'Junior Developer',
-    company: 'WebAgency Co.',
-    location: 'Los Angeles, CA',
-    type: 'full-time',
-    startDate: '2016-06',
-    endDate: '2019-02',
-    current: false,
-    description:
-      'Developed custom web solutions for various clients across different industries.',
-    achievements: [
-      'Delivered 20+ client projects on time and within budget',
-      'Introduced component-based architecture improving code reuse',
-      'Created internal tools saving 10 hours/week of manual work',
-    ],
-    technologies: ['JavaScript', 'React', 'PHP', 'MySQL', 'WordPress'],
-  },
-
-  // ---------------------------------------------------------------------------
-  // ADD MORE POSITIONS HERE
-  // Copy the template below and fill in your details
-  // ---------------------------------------------------------------------------
-  // {
-  //   id: 'exp-4',
-  //   title: 'Your Job Title',
-  //   company: 'Company Name',
-  //   companyLogo: '/logos/company.png',  // Optional
-  //   location: 'City, Country',
-  //   type: 'full-time',
-  //   startDate: 'YYYY-MM',
-  //   endDate: 'YYYY-MM',  // Remove for current position
-  //   current: false,
-  //   description: 'Brief description of your role and responsibilities.',
-  //   achievements: [
-  //     'Achievement with metrics...',
-  //     'Another achievement...',
-  //   ],
-  //   technologies: ['Tech1', 'Tech2', 'Tech3'],
-  // },
 ];
 
 // =============================================================================

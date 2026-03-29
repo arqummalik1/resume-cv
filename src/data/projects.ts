@@ -129,16 +129,9 @@ export interface Project {
  */
 export const projectCategories: string[] = [
   'All',
-  'Web Application',
-  'SaaS',
   'Mobile App',
-  'Data Visualization',
-  'Developer Tools',
-  // Add more categories here:
-  // 'E-Commerce',
-  // 'AI/ML',
-  // 'Open Source',
-  // 'Personal Project',
+  'Web Application',
+  'Personal Project',
 ];
 
 /**
@@ -151,168 +144,159 @@ export const projectCategories: string[] = [
  */
 export const projects: Project[] = [
   // ---------------------------------------------------------------------------
-  // FEATURED PROJECT 1
+  // FEATURED PROJECT - Hire Tech Talent App
   // ---------------------------------------------------------------------------
   {
     id: 'proj-1',
-    slug: 'e-commerce-platform',
-    title: 'E-Commerce Platform',
+    slug: 'hire-tech-talent-app',
+    title: 'Hire Tech Talent App',
     description:
-      'Full-stack e-commerce solution with real-time inventory management and payment processing.',
-    longDescription: `Built a comprehensive e-commerce platform from scratch, featuring real-time inventory tracking, 
-    secure payment processing with Stripe, and an admin dashboard for order management. The platform handles 
-    thousands of concurrent users and processes over $2M in transactions monthly.`,
-    thumbnail: '/projects/ecommerce-thumb.jpg',
-    images: [
-      '/projects/ecommerce-1.jpg',
-      '/projects/ecommerce-2.jpg',
-      '/projects/ecommerce-3.jpg',
-    ],
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Redis', 'AWS'],
-    category: 'Web Application',
+      'Cross-platform mobile app for tech talent hiring with QR Code Scanner, Firebase push notifications, and real-time features.',
+    longDescription: `Designed, developed, and published the Hire Tech Talent app for Android & iOS using React Native. 
+    Implemented Redux state management, QR Code Scanner, and Firebase push notifications. Features include Swipe to Check-in, 
+    Bookmarking, and Notes. Reduced app crashes by 35% by fixing API-related issues.`,
+    thumbnail: '/projects/hire-tech-talent.jpg',
+    images: [],
+    technologies: ['React Native', 'Redux', 'Firebase', 'QR Code Scanner', 'REST APIs'],
+    category: 'Mobile App',
     role: 'Lead Developer',
-    duration: '6 months',
-    liveUrl: 'https://example-ecommerce.com',
-    githubUrl: 'https://github.com/alexjohnson/ecommerce',
+    duration: '1.5 years',
+    liveUrl: 'https://apps.apple.com/in/app/hire-tech-talent/id6450185479',
     featured: true,
     highlights: [
-      'Processed $2M+ in transactions',
-      '99.9% uptime over 2 years',
-      '50ms average API response time',
-      'Handles 10K+ concurrent users',
+      'Published on Apple App Store',
+      'Reduced app crashes by 35%',
+      'QR Code Scanner integration',
+      'Firebase push notifications',
     ],
   },
 
   // ---------------------------------------------------------------------------
-  // FEATURED PROJECT 2
+  // FEATURED PROJECT - Food Delivery App
   // ---------------------------------------------------------------------------
   {
     id: 'proj-2',
-    slug: 'task-management-app',
-    title: 'TaskFlow - Task Management',
+    slug: 'food-delivery-app',
+    title: 'Food Delivery App',
     description:
-      'Collaborative task management application with real-time updates and team features.',
-    longDescription: `A modern task management application designed for remote teams. Features include 
-    real-time collaboration, Kanban boards, time tracking, and integrations with popular tools like 
-    Slack and GitHub.`,
-    thumbnail: '/projects/taskflow-thumb.jpg',
-    images: ['/projects/taskflow-1.jpg', '/projects/taskflow-2.jpg'],
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Docker'],
-    category: 'SaaS',
-    role: 'Full-Stack Developer',
-    duration: '4 months',
-    liveUrl: 'https://taskflow-demo.com',
-    githubUrl: 'https://github.com/alexjohnson/taskflow',
+      'Complete UI implementation for a food delivery application with dynamic rendering and local JSON data.',
+    longDescription: `Developed complete UI for a food delivery application. Implemented dynamic rendering using local JSON data.
+    Features include Welcome Screen, Sign In/Sign Up, Bottom Navigation, and Side Drawer. Built responsive UI components
+    optimized for both Android and iOS platforms.`,
+    thumbnail: '/projects/food-delivery.jpg',
+    images: [],
+    technologies: ['React Native', 'JavaScript', 'CSS', 'JSON'],
+    category: 'Mobile App',
+    role: 'Developer',
+    duration: '3 months',
     featured: true,
     highlights: [
-      '5K+ active users',
-      'Real-time collaboration',
-      '15+ third-party integrations',
-      '4.8/5 user rating',
+      'Complete UI implementation',
+      'Welcome Screen with animations',
+      'Sign In/Sign Up flow',
+      'Bottom navigation and side drawer',
     ],
   },
 
   // ---------------------------------------------------------------------------
-  // FEATURED PROJECT 3
+  // FEATURED PROJECT - Fantasy Match Scheduler
   // ---------------------------------------------------------------------------
   {
     id: 'proj-3',
-    slug: 'analytics-dashboard',
-    title: 'DataViz Analytics Dashboard',
+    slug: 'fantasy-match-scheduler',
+    title: 'Fantasy Match Scheduler App',
     description:
-      'Interactive analytics dashboard with customizable charts and real-time data visualization.',
-    thumbnail: '/projects/analytics-thumb.jpg',
-    images: ['/projects/analytics-1.jpg', '/projects/analytics-2.jpg'],
-    technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
-    category: 'Data Visualization',
-    role: 'Frontend Lead',
-    duration: '3 months',
-    // liveUrl: undefined,  // No live demo
-    // githubUrl: undefined,  // Private repository
+      'User-friendly interface for scheduling fantasy matches with date selection, time slot management, and local storage.',
+    thumbnail: '/projects/fantasy-scheduler.jpg',
+    images: [],
+    technologies: ['React Native', 'JavaScript', 'Local Storage'],
+    category: 'Mobile App',
+    role: 'Developer',
+    duration: '2 months',
+    githubUrl: 'https://github.com/arqummalik1/Fantasy-Match-Scheduler',
     featured: true,
     highlights: [
-      '20+ chart types',
-      'Export to PDF/Excel',
-      'Custom report builder',
-      'Role-based access control',
+      'Date and weekly selection',
+      'Time slot management (add/edit/delete)',
+      'Local storage for persistent data',
+      'GitHub repository available',
     ],
   },
 
   // ---------------------------------------------------------------------------
-  // NON-FEATURED PROJECT
+  // PROJECT - WP Event Manager App
   // ---------------------------------------------------------------------------
   {
     id: 'proj-4',
-    slug: 'mobile-fitness-app',
-    title: 'FitTrack Mobile App',
+    slug: 'wp-event-manager-app',
+    title: 'WP Event Manager App',
     description:
-      'Cross-platform fitness tracking application with workout plans and progress analytics.',
-    thumbnail: '/projects/fitness-thumb.jpg',
-    images: ['/projects/fitness-1.jpg', '/projects/fitness-2.jpg'],
-    technologies: ['React Native', 'TypeScript', 'Firebase', 'Node.js'],
+      'Enhanced and maintained the WP Event Manager app with Donut Charts for ticket sales insights and secure app-locking system.',
+    thumbnail: '/projects/wp-event-manager.jpg',
+    images: [],
+    technologies: ['React Native', 'Redux', 'Firebase', 'REST APIs'],
     category: 'Mobile App',
-    role: 'Mobile Developer',
-    duration: '5 months',
-    // liveUrl: undefined,  // App store link would go here
-    githubUrl: 'https://github.com/alexjohnson/fittrack',
+    role: 'React Native Developer',
+    duration: '1.5 years',
+    liveUrl: 'https://apps.apple.com/in/app/wp-event-manager/id1554422731',
     featured: false,
     highlights: [
-      'iOS & Android support',
-      'Offline-first architecture',
-      'Wearable device integration',
-      '10K+ downloads',
+      'Donut Charts for ticket sales insights',
+      'Secure app-locking system for license validation',
+      'Continuous improvements and maintenance',
+      'Published on Apple App Store',
     ],
   },
 
   // ---------------------------------------------------------------------------
-  // NON-FEATURED PROJECT
+  // PROJECT - Faveo Helpdesk App
   // ---------------------------------------------------------------------------
   {
     id: 'proj-5',
-    slug: 'open-source-cli',
-    title: 'DevToolkit CLI',
+    slug: 'faveo-helpdesk-app',
+    title: 'Faveo Helpdesk App',
     description:
-      'Open-source command-line toolkit for developers with code generation and automation.',
-    thumbnail: '/projects/cli-thumb.jpg',
-    images: ['/projects/cli-1.jpg'],
-    technologies: ['Go', 'Cobra', 'Docker'],
-    category: 'Developer Tools',
-    role: 'Creator & Maintainer',
-    duration: 'Ongoing',
-    // liveUrl: undefined,  // CLI tools usually don't have live URLs
-    githubUrl: 'https://github.com/alexjohnson/devtoolkit',
+      'Developed and maintained the Faveo Helpdesk app with multi-language support, white-labeling, and improved scalability.',
+    thumbnail: '/projects/faveo-helpdesk.jpg',
+    images: [],
+    technologies: ['React Native', 'REST APIs', 'Multi-language Support'],
+    category: 'Mobile App',
+    role: 'Associate Software Engineer',
+    duration: '1 year',
+    liveUrl: 'https://apps.apple.com/in/app/faveo-helpdesk/id1488072909',
     featured: false,
     highlights: [
-      '2K+ GitHub stars',
-      '500+ contributors',
-      'Used by 100+ companies',
-      'Weekly releases',
+      'Multi-language support',
+      'White-labeling features',
+      'Improved scalability',
+      'Published on Apple App Store',
     ],
   },
 
   // ---------------------------------------------------------------------------
-  // ADD MORE PROJECTS HERE
+  // PROJECT - Faveo Support App
   // ---------------------------------------------------------------------------
-  // {
-  //   id: 'proj-6',
-  //   slug: 'your-project-slug',
-  //   title: 'Your Project Title',
-  //   description: 'Short description of your project...',
-  //   longDescription: 'Detailed description...',  // Optional
-  //   thumbnail: '/projects/your-project-thumb.jpg',
-  //   images: ['/projects/your-project-1.jpg'],
-  //   technologies: ['Tech1', 'Tech2', 'Tech3'],
-  //   category: 'Web Application',
-  //   role: 'Your Role',
-  //   duration: '3 months',
-  //   liveUrl: 'https://your-project.com',  // Optional
-  //   githubUrl: 'https://github.com/you/project',  // Optional
-  //   featured: false,
-  //   highlights: [
-  //     'Highlight 1 with metrics',
-  //     'Highlight 2',
-  //   ],
-  // },
+  {
+    id: 'proj-6',
+    slug: 'faveo-support-app',
+    title: 'Faveo Support App',
+    description:
+      'Redesigned the Faveo Support app to improve scalability and boosted app performance by 20%.',
+    thumbnail: '/projects/faveo-support.jpg',
+    images: [],
+    technologies: ['React Native', 'REST APIs'],
+    category: 'Mobile App',
+    role: 'Associate Software Engineer',
+    duration: '1 year',
+    liveUrl: 'https://apps.apple.com/in/app/faveo-support/id1490237489',
+    featured: false,
+    highlights: [
+      'App redesign for improved scalability',
+      'Boosted performance by 20%',
+      'Critical bug fixes',
+      'Published on Apple App Store',
+    ],
+  },
 ];
 
 // =============================================================================
